@@ -65,7 +65,7 @@ while True:
     if (strChoice == '1'):
         print('Current to do list is:')
         for row in lstTable:
-            for i in row.keys():
+            for i in row:
                 print('    ',i,': ',row[i],' priority',sep='')
         continue
     # Add a new item to the list/Table
@@ -94,7 +94,7 @@ while True:
         print('Saving')
         file_out = open(objFile,'w')
         for row in lstTable:
-            for i in row.keys():
+            for i in row:
                 file_out.write(i)
                 file_out.write(',')
                 file_out.write(row[i])
@@ -110,7 +110,7 @@ while True:
             print('Saving and Exiting')
             file_out = open(objFile,'w')
             for row in lstTable:
-                for i in row.keys():
+                for i in row:
                     file_out.write(i)
                     file_out.write(',')
                     file_out.write(row[i])
